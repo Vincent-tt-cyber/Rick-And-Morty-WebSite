@@ -1,5 +1,6 @@
 .character-card {
   display: flex;
+  flex-direction: column;
   /* justify-content: space-between; */
   align-items: center;
 
@@ -9,26 +10,54 @@
   transition: all 0.3s ease;
 }
 
-.character-card:hover {
+/* .character-card:hover {
   transform: scale(1.02);
+} */
+
+.character-card__img {
+  /* background-size: cover; */
+  object-position: center center;
+  object-fit: cover;
+  width: 100%;
+}
+
+.character-card__img-cover {
+  display: flex;
+  max-width: 400px;
+  width: 100%;
 }
 
 .character-card-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* align-items: center; */
   padding: 20px;
   width: 100%;
 }
 
-.character-card__title { 
-    font-size: 20px;
-    font-weight: 900;
-    color: #fff;
+.character-card__description {
+  margin: 0 0 10px 0;
 }
-.character-card__location { 
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
+
+.character-card__title {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.character-card__title:hover {
+  color: orange;
+}
+.character-card__location {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ccc;
+}
+.character-card__location-name {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
 }

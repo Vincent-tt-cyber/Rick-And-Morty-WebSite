@@ -1,6 +1,6 @@
 .main-grid-laoyout {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, minmax(200px, 400px));
   grid-template-rows: repeat(auto, 1fr);
   grid-gap: 20px;
 }
