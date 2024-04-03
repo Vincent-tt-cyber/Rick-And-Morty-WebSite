@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import CharacterCard from "../components/CharacterCard/CharacterCard";
-import styles from '../styles/App.module.css'
+import styles from "../styles/App.module.css";
 import Loading from "../components/Loading/Loading";
 
 const Home = () => {
@@ -20,9 +20,13 @@ const Home = () => {
       .catch((err) => console.error(err));
   };
 
+  const handleNextPage = () => {
+    setPage(page + 1);
+  };
+
   React.useEffect(() => {
     fetchCharacters();
-  }, []);
+  }, [page]);
   return (
     <div className="container">
       <div className={styles["main-grid-laoyout"]}>
@@ -33,6 +37,10 @@ const Home = () => {
         ) : (
           <Loading />
         )}
+      </div>
+      <div>
+        {/* <button onClick={handlePrevPage}>Предыдущая страница</button> */}
+        <button onClick={handleNextPage}>Следующая страница</button>
       </div>
     </div>
   );
